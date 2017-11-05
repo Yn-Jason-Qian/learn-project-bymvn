@@ -18,3 +18,4 @@ SConstruct
 *.iws
 *-gc.log
 
+/target/

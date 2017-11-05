@@ -1,4 +1,4 @@
-package net.disappearedcat;
+package net.stealthcat;
 
 /**
  * Hello world!

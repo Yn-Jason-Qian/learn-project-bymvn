@@ -1,4 +1,4 @@
-package net.disappearedcat;
+package net.stealthcat;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
