@@ -34,6 +34,29 @@
 	    <artifactId>netty-all</artifactId>
 	    <version>4.1.16.Final</version>
 	</dependency>
+	
+	<dependency>
+	    <groupId>com.google.guava</groupId>
+	    <artifactId>guava</artifactId>
+	    <version>22.0</version>
+	</dependency>
+	
     
   </dependencies>
+  
+<!--   	<build> -->
+<!--   		<plugins>   -->
+<!--         <plugin>   -->
+<!--             <groupId>org.apache.maven.plugins</groupId>   -->
+<!--             <artifactId>maven-compiler-plugin</artifactId>   -->
+<!--             <version>3.0</version>   -->
+<!--             <configuration>   -->
+<!--                 <source>1.7</source>   -->
+<!--                 <target>1.7</target>   -->
+<!--                 <encoding>UTF-8</encoding>   -->
+<!--                 <verbal>true</verbal>   -->
+<!--             </configuration>   -->
+<!--         </plugin>   -->
+<!--     </plugins>   -->
+<!--   	</build> -->
 </project>
