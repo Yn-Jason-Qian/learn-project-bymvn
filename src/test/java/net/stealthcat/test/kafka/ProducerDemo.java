@@ -1,4 +1,4 @@
-package net.stealthcat.test.kafka.producer;
+package net.stealthcat.test.kafka;
 
 import org.apache.kafka.clients.producer.*;
 
