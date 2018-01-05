@@ -92,8 +92,8 @@ public class RedisTransactionTest {
                 getCondition.signal();
                 updatedCondition.await();
                 System.out.println("Transaction task try to set value.");
-                jedis.incr(key);
-                transaction.exec();
+                transaction.incr(key);
+                System.out.println(String.format("Transaction task execute state = %s", transaction.exec()));
             } catch (Exception e) {
                 if (transaction != null) {
                     transaction.discard();
