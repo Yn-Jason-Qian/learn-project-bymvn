@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>learn-project-bymvn-util</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>learn-project-bymvn-test</artifactId>
     <build>
         <plugins>
             <plugin>
@@ -23,14 +22,6 @@
             </plugin>
         </plugins>
     </build>
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>3.17</version>
-        </dependency>
 
-    </dependencies>
 
 </project>
