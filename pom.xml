@@ -9,6 +9,7 @@
     <module>learn-project-bymvn-util</module>
     <module>learn-project-bymvn-test</module>
       <module>learn-project-bymvn-rpc</module>
+      <module>learn-project-acm</module>
   </modules>
   <packaging>pom</packaging>
 
