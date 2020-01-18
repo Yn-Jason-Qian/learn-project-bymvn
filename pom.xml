@@ -10,6 +10,7 @@
     <module>learn-project-bymvn-test</module>
       <module>learn-project-bymvn-rpc</module>
       <module>learn-project-acm</module>
+      <module>learn-project-leecode</module>
   </modules>
   <packaging>pom</packaging>
 
