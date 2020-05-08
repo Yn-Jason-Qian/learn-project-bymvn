@@ -17,5 +17,15 @@ SConstruct
 *.ipr
 *.iws
 *-gc.log
+*.class
 
 /target/
+/.idea/
+/target/
+/disconf/
+*/target/
+*.iml
+/out/
+/.settings/
+*.classpath
+*.project
