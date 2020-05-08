@@ -1,4 +1,4 @@
-package net.stealthcat.test;
+package net.stealthcat.test.canal;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.otter.canal.client.CanalConnector;

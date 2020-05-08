@@ -1,4 +1,4 @@
-package net.stealthcat.test;
+package net.stealthcat.test.disruptor;
 
 public class CacheLineEffect {
 
