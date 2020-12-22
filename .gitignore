@@ -18,4 +18,14 @@ SConstruct
 *.iws
 *-gc.log
 *.class
-*/target
+
+/target/
+/.idea/
+/target/
+/disconf/
+*/target/
+*.iml
+/out/
+/.settings/
+*.classpath
+*.project
