@@ -23,5 +23,12 @@
         </plugins>
     </build>
 
+    <dependencies>
+        <dependency>
+            <groupId>net.stealthcat</groupId>
+            <artifactId>learn-project-bymvn-util</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

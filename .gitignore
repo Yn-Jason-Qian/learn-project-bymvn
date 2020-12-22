@@ -17,5 +17,5 @@ SConstruct
 *.ipr
 *.iws
 *-gc.log
-
-/target/
+*.class
+*/target

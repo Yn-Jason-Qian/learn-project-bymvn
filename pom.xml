@@ -8,8 +8,8 @@
   <modules>
     <module>learn-project-bymvn-util</module>
     <module>learn-project-bymvn-test</module>
-      <module>learn-project-bymvn-rpc</module>
-      <module>learn-project-acm</module>
+    <module>learn-project-bymvn-rpc</module>
+    <module>learn-project-acm</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -39,8 +39,34 @@
       <artifactId>spring-aspects</artifactId>
         <version>4.3.18.RELEASE</version>
     </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>4.3.18.RELEASE</version>
+    </dependency>
 
-    <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.2.8</version>
+    </dependency>
+
+    <!--mybatis-spring整合包，这样就可以通过spring配置bean的方式进行mybatis配置了，
+    不然需要单独使用mybatis的配置-->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-spring</artifactId>
+      <version>1.2.2</version>
+    </dependency>
+
+    <!-- 导入dbcp的jar包，用来在spring-mybatis.xml中配置数据库 -->
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>1.4</version>
+    </dependency>
+
+
     <dependency>
       <groupId>redis.clients</groupId>
       <artifactId>jedis</artifactId>
@@ -119,19 +145,19 @@
 
   </dependencies>
   
-<!--   	<build> -->
-<!--   		<plugins>   -->
-<!--         <plugin>   -->
-<!--             <groupId>org.apache.maven.plugins</groupId>   -->
-<!--             <artifactId>maven-compiler-plugin</artifactId>   -->
-<!--             <version>3.0</version>   -->
-<!--             <configuration>   -->
-<!--                 <source>1.7</source>   -->
-<!--                 <target>1.7</target>   -->
-<!--                 <encoding>UTF-8</encoding>   -->
-<!--                 <verbal>true</verbal>   -->
-<!--             </configuration>   -->
-<!--         </plugin>   -->
-<!--     </plugins>   -->
-<!--   	</build> -->
+   	<build>
+   		<plugins>
+         <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+             <artifactId>maven-compiler-plugin</artifactId>
+             <version>3.0</version>
+             <configuration>
+                 <source>1.7</source>
+                 <target>1.7</target>
+                 <encoding>UTF-8</encoding>
+                 <!--<verbal>true</verbal>-->
+             </configuration>
+         </plugin>
+     </plugins>
+   	</build>
 </project>
