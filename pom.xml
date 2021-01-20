@@ -11,7 +11,8 @@
       <module>learn-project-bymvn-rpc</module>
       <module>learn-project-acm</module>
       <module>learn-project-leecode</module>
-      <module>practice</module>
+      <module>learn-project-practice</module>
+      <module>learn-project-bymvn-springboot</module>
   </modules>
   <packaging>pom</packaging>
 
