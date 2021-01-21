@@ -1,8 +1,8 @@
 package effctiveJava.section1;
 
-import com.google.common.collect.Maps;
 
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /*
  * Service provider framework
@@ -12,7 +12,7 @@ public class Services {
 	
 	private Services(){};
 	
-	private static Map<String, ServiceProvider> providers = Maps.newConcurrentMap();
+	private static Map<String, ServiceProvider> providers = new ConcurrentHashMap<>();
 	
 	private static final String DEFAULT_PROVIDER_NAME = "<def>";
 	

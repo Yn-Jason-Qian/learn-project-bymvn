@@ -29,3 +29,4 @@ SConstruct
 /.settings/
 *.classpath
 *.project
+*.log

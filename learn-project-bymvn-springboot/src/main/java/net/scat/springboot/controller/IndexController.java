@@ -1,16 +1,16 @@
 package net.scat.springboot.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import net.scat.springboot.model.LearnModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
+@Slf4j
 public class IndexController {
 
     @GetMapping("/index")
@@ -38,6 +38,8 @@ public class IndexController {
         learnList.add(bean);
         view.addObject("learnList", learnList);
         view.setViewName("index");
+
+        log.info("");
         return view;
     }
 }

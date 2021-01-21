@@ -13,20 +13,21 @@ public class ProxyTest {
 	void proxy() {
 		new A().proxy();
 	}
+
+	private static class A {
+
+		public void proxy() {
+			IInterface inter = (IInterface) Proxy.newProxyInstance(Test.class.getClassLoader(), new Class[]{IInterface.class}, new InvocationHandler() {
+
+				@Override
+				public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+					System.out.println("proxy test：" + this.getClass());
+					return null;
+				}
+			});
+			inter.test();
+		}
+
+	}
 }
 
-class A {
-	
-	public void proxy() {
-		IInterface inter = (IInterface) Proxy.newProxyInstance(Test.class.getClassLoader(), new Class[]{IInterface.class}, new InvocationHandler() {
-			
-			@Override
-			public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-				System.out.println("proxy test：" + this.getClass());
-				return null;
-			}
-		});
-		inter.test();
-	}
-	
-}
