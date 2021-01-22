@@ -84,7 +84,7 @@
             <AppenderRef ref="RollingRandomAccessFileError"/>
         </Root>
 
-<!--        <Logger name="net.scat.springboot.test.Log4j2Test" level="trace" additivity="true">-->
+<!--        <Logger name="Log4j2Test" level="trace" additivity="true">-->
 <!--&lt;!&ndash;            <AppenderRef ref="STDOUT"/>&ndash;&gt;-->
 <!--        </Logger>-->
     </Loggers>

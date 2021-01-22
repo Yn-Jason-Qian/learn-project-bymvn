@@ -1,6 +1,5 @@
 package net.stealthcat.test.concurr;
 
-import io.netty.util.internal.MpscLinkedQueueNode;
 
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;

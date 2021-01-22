@@ -13,6 +13,7 @@
       <module>learn-project-leecode</module>
       <module>learn-project-practice</module>
       <module>learn-project-bymvn-springboot</module>
+      <module>learn-project-springboot-api</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -138,7 +139,11 @@
 <!--      <version>3.4.2</version>-->
 <!--    </dependency>-->
 
-
+      <dependency>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok</artifactId>
+          <version>1.18.16</version>
+      </dependency>
   </dependencies>
   
    	<build>
