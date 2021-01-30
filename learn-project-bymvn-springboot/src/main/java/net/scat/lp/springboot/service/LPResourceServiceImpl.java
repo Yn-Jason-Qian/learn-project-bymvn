@@ -3,6 +3,7 @@ package net.scat.lp.springboot.service;
 import net.scat.lp.springboot.dao.LPResourceMapper;
 import net.scat.lp.springboot.po.LPResource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
 @Service
 public class LPResourceServiceImpl implements LPResourceService{
     @Autowired
+    @Qualifier("lPResourceMapperImpl")
     private LPResourceMapper lpResourceMapper;
     @Override
     public List<LPResource> getList(int page, int pageSize) {

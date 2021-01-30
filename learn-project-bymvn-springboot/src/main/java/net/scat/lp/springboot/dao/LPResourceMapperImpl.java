@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+@Repository("lPResourceMapperImpl")
 public class LPResourceMapperImpl implements LPResourceMapper{
 
     @Autowired

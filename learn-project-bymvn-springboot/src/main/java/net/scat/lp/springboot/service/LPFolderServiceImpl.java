@@ -13,7 +13,7 @@ public class LPFolderServiceImpl implements LPFolderService{
     private LPFolderMapper lpFolderMapper;
 
     @Override
-    public List<LPFolder> getFolderList(int page, int pageSize) {
+    public List<LPFolder> getList(int page, int pageSize) {
         int start = (page - 1) * pageSize;
         return lpFolderMapper.selectList(start, pageSize);
     }

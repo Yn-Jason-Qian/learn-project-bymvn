@@ -21,10 +21,8 @@ SConstruct
 
 /target/
 /.idea/
-/target/
 /disconf/
 */target/
-*.iml
 /out/
 /.settings/
 *.classpath

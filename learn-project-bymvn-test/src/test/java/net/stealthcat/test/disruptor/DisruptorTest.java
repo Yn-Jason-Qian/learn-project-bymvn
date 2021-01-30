@@ -4,6 +4,8 @@ import com.lmax.disruptor.*;
 import com.lmax.disruptor.dsl.Disruptor;
 import com.lmax.disruptor.dsl.ProducerType;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,11 +18,28 @@ public class DisruptorTest {
     private static final int WORKER_SIZE = 10;
     private RingBuffer<Event> ringBuffer;
 
-    @Data
+    @Getter
+    @Setter
     private static class Event {
         private String type;
 
         private String msg;
+
+        public String getType() {
+            return type;
+        }
+
+        public void setType(String type) {
+            this.type = type;
+        }
+
+        public String getMsg() {
+            return msg;
+        }
+
+        public void setMsg(String msg) {
+            this.msg = msg;
+        }
     }
 
 

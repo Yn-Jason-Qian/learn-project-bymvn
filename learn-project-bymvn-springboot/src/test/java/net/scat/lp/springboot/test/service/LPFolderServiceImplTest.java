@@ -22,7 +22,7 @@ public class LPFolderServiceImplTest {
 
     @Test
     public void getFolderList() {
-        log.info(JSONUtils.toJSON(lpFolderService.getFolderList(1, 10)));
+        log.info(JSONUtils.toJSON(lpFolderService.getList(1, 10)));
     }
 
     @Test
