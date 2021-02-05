@@ -8,7 +8,7 @@ import lombok.Getter;
 public enum ResultCode {
     SUCCESS(200, "Success."),
     NOT_FOUND(404, "Not found."),
-    INTERNAL_ERROR(500, "Internal error.");
+    INTERNAL_ERROR(500, "Internal Server error.");
 
     private final int code;
 

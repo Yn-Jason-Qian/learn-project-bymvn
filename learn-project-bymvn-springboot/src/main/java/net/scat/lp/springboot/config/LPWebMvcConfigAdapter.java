@@ -11,85 +11,84 @@ import org.springframework.web.servlet.config.annotation.*;
 import java.util.List;
 
 @Configuration
-public class LPWebMvcConfigAdapter extends WebMvcConfigurerAdapter {
-
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        super.addResourceHandlers(registry);
-    }
+public class LPWebMvcConfigAdapter implements WebMvcConfigurer {
 
     @Override
     public void configurePathMatch(PathMatchConfigurer configurer) {
-        super.configurePathMatch(configurer);
+
     }
 
     @Override
     public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
-        super.configureContentNegotiation(configurer);
+
     }
 
     @Override
     public void configureAsyncSupport(AsyncSupportConfigurer configurer) {
-        super.configureAsyncSupport(configurer);
+
     }
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-        super.configureDefaultServletHandling(configurer);
+
     }
 
     @Override
     public void addFormatters(FormatterRegistry registry) {
-        super.addFormatters(registry);
+
     }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        super.addInterceptors(registry);
+
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+
     }
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        super.addCorsMappings(registry);
+
     }
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        super.addViewControllers(registry);
+        registry.addViewController("/dashboard").setViewName("dashboard");
     }
 
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
-        super.configureViewResolvers(registry);
     }
 
     @Override
-    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
-        super.addArgumentResolvers(argumentResolvers);
+    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
+
     }
 
     @Override
-    public void addReturnValueHandlers(List<HandlerMethodReturnValueHandler> returnValueHandlers) {
-        super.addReturnValueHandlers(returnValueHandlers);
+    public void addReturnValueHandlers(List<HandlerMethodReturnValueHandler> handlers) {
+
     }
 
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-        super.configureMessageConverters(converters);
+
     }
 
     @Override
     public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
-        super.extendMessageConverters(converters);
+
     }
 
     @Override
-    public void configureHandlerExceptionResolvers(List<HandlerExceptionResolver> exceptionResolvers) {
-        super.configureHandlerExceptionResolvers(exceptionResolvers);
+    public void configureHandlerExceptionResolvers(List<HandlerExceptionResolver> resolvers) {
+
     }
 
     @Override
-    public void extendHandlerExceptionResolvers(List<HandlerExceptionResolver> exceptionResolvers) {
-        super.extendHandlerExceptionResolvers(exceptionResolvers);
+    public void extendHandlerExceptionResolvers(List<HandlerExceptionResolver> resolvers) {
+
     }
 }

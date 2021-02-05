@@ -1,0 +1,37 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="common_resource::common"></div>
+</head>
+<h2 class="sub-header">Learn Resources</h2>
+<table id="table_list"></table>
+<div id="table_page"></div>
+<script th:inline="javascript">
+    $("#table_list").jqGrid({
+        url: /*[[@{/lpResource/pageList}]]*/,
+        datatype: "json",
+        mtype: "GET",
+        colNames: ["id", "title", "description", "author", "url", "folder", "labels", "is_del", "create_time", "update_time"],
+        colModel: [
+            { name: "id", width: 55},
+            { name: "title", width: 90 },
+            { name: "description", width: 80, align: "right" },
+            { name: "author", width: 80, align: "right" },
+            { name: "url", width: 80, align: "right" },
+            { name: "folderId", width: 150, sortable: false },
+            { name: "labels", width: 150, sortable: false },
+            { name: "isDel", width: 150, sortable: false },
+            { name: "createTime", width: 150, sortable: false },
+            { name: "updateTime", width: 150, sortable: false }
+        ],
+        pager: "#table_page",
+        rowNum: 10,
+        rowList: [10, 20, 30],
+        sortname: "id",
+        sortorder: "desc",
+        viewrecords: true,
+        gridview: true,
+        autoencode: true,
+        caption: "My first grid"
+    });
+</script>
+</html>
