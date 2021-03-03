@@ -14,6 +14,9 @@
       <module>learn-project-practice</module>
       <module>learn-project-bymvn-springboot</module>
       <module>learn-project-springboot-api</module>
+      <module>learn-project-bymvn-springcloud</module>
+      <module>learn-project-bymvn-springcloudserver</module>
+      <module>learn-project-bymvn-springcloudconsumer</module>
   </modules>
   <packaging>pom</packaging>
 

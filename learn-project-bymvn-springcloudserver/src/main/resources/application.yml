@@ -1,0 +1,61 @@
+---
+spring:
+  application:
+    name: replicas
+  profiles: standalone
+
+server:
+  port: 8888
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
+
+---
+spring:
+  application:
+    name: replicas
+  profiles: replicas1
+
+server:
+  port: 8888
+eureka:
+  instance:
+    hostname: replicas1
+  client:
+    service-url:
+      defaultZone: http://replicas2:8889/eureka/,http://replicas3:8890/eureka/
+
+---
+spring:
+  application:
+    name: replicas
+  profiles: replicas2
+
+server:
+  port: 8889
+eureka:
+  instance:
+    hostname: replicas2
+  client:
+    service-url:
+      defaultZone: http://replicas1:8888/eureka,http://replicas3:8890/eureka/
+
+---
+spring:
+  application:
+    name: replicas
+  profiles: replicas3
+
+server:
+  port: 8890
+eureka:
+  instance:
+    hostname: replicas3
+  client:
+    service-url:
+      defaultZone: http://replicas1:8888/eureka,http://replicas2:8889/eureka/

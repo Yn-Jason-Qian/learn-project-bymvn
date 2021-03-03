@@ -1,0 +1,25 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
+
+spring:
+  application:
+    name: service-application
+  profiles: service1
+server:
+  port: 8080
+
+---
+spring:
+  profiles: service2
+  application:
+    name: service-application
+
+server:
+  port: 8082
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
