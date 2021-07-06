@@ -10,7 +10,10 @@ public class Producer {
 
     public static void main(String[] args) throws IOException, TimeoutException {
         ConnectionFactory connectionFactory = new ConnectionFactory();
-        connectionFactory.setHost("localhost");
+        connectionFactory.setHost("192.168.136.132");
+        connectionFactory.setUsername("admin");
+        connectionFactory.setPassword("admin");
+        connectionFactory.setVirtualHost("/");
         Connection connection = connectionFactory.newConnection("123456");
 
         Channel channel = connection.createChannel();
@@ -34,10 +37,13 @@ public class Producer {
         });
         channel.queueDeclare("test", false, false, false, null);
         Scanner scanner = new Scanner(System.in);
-        String message;
-        while (!(message = scanner.nextLine()).equals("exit")) {
-            channel.basicPublish("", "test", null, message.getBytes());
+        String message = "message";
+        for (int i = 0; i < 20; i++) {
+            channel.basicPublish("", "test", null, (message + i).getBytes());
         }
+//        while (!(message = scanner.nextLine()).equals("exit")) {
+//            channel.basicPublish("", "test", null, message.getBytes());
+//        }
         System.exit(0);
     }
 }
